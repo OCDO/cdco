@@ -14,8 +14,8 @@
     <owl:Ontology rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco">
         <owl:versionIRI rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/1.0.0"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7564-7990"/>
-        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystallographic Defect Core Ontology (CDCO)</terms:description>
-        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystallographic Defect Core Ontology (CDCO) defines the common terminology shared across all types of crystallographic defects, providing a unified framework for data integration in materials science.</terms:title>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystallographic Defect Core Ontology (CDCO) defines the common terminology shared across all types of crystallographic defects, providing a unified framework for data integration in materials science.</terms:description>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystallographic Defect Core Ontology (CDCO)</terms:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/OCDO/cdco</rdfs:seeAlso>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0.0</owl:versionInfo>
         <schema:citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abril Azocar Guzman. (2025). Crystallographic Defect Core Ontology. http://purls.helmholtz-metadaten.de/cdos/cdco</schema:citation>
