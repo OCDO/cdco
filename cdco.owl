@@ -285,6 +285,17 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purls.helmholtz-metadaten.de/cdos/cdco/hasDefectComplex -->
+
+    <owl:ObjectProperty rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/hasDefectComplex">
+        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallineMaterial"/>
+        <rdfs:range rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/DefectComplex"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data property linking a crystalline material to a specific defect complex, which consists of two or more interacting defects.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has defect complex</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -318,7 +329,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purls.helmholtz-metadaten.de/cdos/cdco/DefectComplex -->
 
     <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/DefectComplex">
-        <rdfs:label>Defect Complex</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A combination of two or more defects in close proximity that interact with each other, such as a vacancy-impurity pair or a grain boundary-impurity pair, often affecting the material’s properties.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defect Complex</rdfs:label>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defect Cluster</skos:altLabel>
     </owl:Class>
     
 

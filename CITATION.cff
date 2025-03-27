@@ -1,0 +1,44 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'OCDO/cdco: v0.0.1'
+message: >-
+  Please cite this ontology using the metadata from
+  "preferred-citation".
+type: software
+authors:
+  - given-names: Abril
+    family-names: Azocar Guzman
+    orcid: 'https://orcid.org/0000-0001-7564-7990'
+    email: a.azocar.guzman@fz-juelich.de
+    affiliation: Forschungszentrum Juelich (FZJ)
+identifiers:
+  - type: 
+    value: 
+    description: 
+  - type: url
+    value: 'https://purls.helmholtz-metadaten.de/cdos/cdco'
+    description: Ontology IRI
+repository-code: 'https://github.com/OCDO/cdco'
+abstract: >-
+  Crystallographic Defect Core Ontology (CDCO) defines the common terminology shared across all types of crystallographic defects, providing a unified framework for data integration in materials science.
+keywords:
+  - ontology
+  - crystal structure
+  - materials science
+  - materials informatics
+  - semantics
+  - crystallographic defects
+license: CC-BY-4.0
+commit: 
+version: 
+date-released: 
+preferred-citation:
+  authors:
+    - family-names: Azocar Guzman
+      given-names: Abril
+  title: "Crystallographic Defect Core Ontology (CDCO)"
+  type: generic
+  year: 2025
+  url: 
