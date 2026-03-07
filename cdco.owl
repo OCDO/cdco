@@ -12,15 +12,20 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco">
-        <owl:versionIRI rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/0.0.1"/>
+        <owl:versionIRI rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/0.2.0"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6776-1213"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-8933-0238"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-0698-4891"/>
+        <terms:contributor rdf:resource="https://orcid.org/0009-0002-1604-5812"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7564-7990"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-9560-4728"/>
-        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystallographic Defect Core Ontology (CDCO) defines the common terminology shared across all types of crystallographic defects, providing a unified framework for data integration in materials science.</terms:description>
-        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystallographic Defect Core Ontology (CDCO)</terms:title>
+        <terms:description>Crystallographic Defect Core Ontology (CDCO) defines the common terminology shared across all types of crystallographic defects, providing a unified framework for data integration in materials science.</terms:description>
+        <terms:title>Crystallographic Defect Core Ontology (CDCO)</terms:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/OCDO/cdco</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.1</owl:versionInfo>
-        <schema:citation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abril Azocar Guzman and Stefan Sandfeld. (2025). Crystallographic Defect Core Ontology. http://purls.helmholtz-metadaten.de/cdos/cdco</schema:citation>
-        <schema:creativeWorkStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pre-release</schema:creativeWorkStatus>
+        <owl:priorVersion rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/v0.0.1"/>
+        <owl:versionInfo>0.2.0</owl:versionInfo>
+        <schema:citation>Abril Azocar Guzman and Stefan Sandfeld. (2025). Crystallographic Defect Core Ontology. http://purls.helmholtz-metadaten.de/cdos/cdco</schema:citation>
+        <schema:creativeWorkStatus>Ontology Specification</schema:creativeWorkStatus>
         <schema:funder rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ror.org/05qj6w324</schema:funder>
         <schema:logo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/OCDO/.github/refs/heads/main/profile/ocdo_logo.png</schema:logo>
     </owl:Ontology>
@@ -280,8 +285,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:ObjectProperty rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/hasCrystallographicDefect">
         <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallineMaterial"/>
         <rdfs:range rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallographicDefect"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data property linking a crystalline material and a crystallographic defect, such as vacancies, interstitials, or dislocations.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has crystallographic defect</rdfs:label>
+        <obo:IAO_0000115>A data property linking a crystalline material and a crystallographic defect, such as vacancies, interstitials, or dislocations.</obo:IAO_0000115>
+        <rdfs:label>has crystallographic defect</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -291,9 +296,43 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:ObjectProperty rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/hasDefectComplex">
         <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallineMaterial"/>
         <rdfs:range rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/DefectComplex"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data property linking a crystalline material to a specific defect complex, which consists of two or more interacting defects.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has defect complex</rdfs:label>
+        <obo:IAO_0000115>A data property linking a crystalline material to a specific defect complex, which consists of two or more interacting defects.</obo:IAO_0000115>
+        <rdfs:label>has defect complex</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purls.helmholtz-metadaten.de/cdos/cdco/isPartOfDefectComplex -->
+
+    <owl:ObjectProperty rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/isPartOfDefectComplex">
+        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallographicDefect"/>
+        <rdfs:range rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/DefectComplex"/>
+        <obo:IAO_0000115>A data property linking a crystallographic defect to a defect complex, indicating that the defect is a constituent of the complex.</obo:IAO_0000115>
+        <rdfs:label>is part of defect complex</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purls.helmholtz-metadaten.de/cdos/cdco/hasRelativeDefectDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/hasRelativeDefectDistance">
+        <rdfs:domain rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/DefectComplex"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <obo:IAO_0000115>A data property specifying the relative distance between defects within a defect complex.</obo:IAO_0000115>
+        <rdfs:comment>The unit of distance is not defined; it may be a physical measure (e.g., nanometers) or a relative metric (e.g., atomic layers), indicating only the relative separation between defects.</rdfs:comment>
+        <rdfs:label>has relative defect distance</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -312,7 +351,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallineMaterial">
         <rdfs:subClassOf rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/Material"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure.</obo:IAO_0000115>
+        <obo:IAO_0000115>Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure.</obo:IAO_0000115>
         <rdfs:label>Crystalline Material</rdfs:label>
     </owl:Class>
     
@@ -321,7 +360,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallographicDefect -->
 
     <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallographicDefect">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lattice irregularity having one or more of its dimensions on the order of an atomic diameter.</obo:IAO_0000115>
+        <obo:IAO_0000115>Lattice irregularity having one or more of its dimensions on the order of an atomic diameter.</obo:IAO_0000115>
         <rdfs:label>Crystallographic Defect</rdfs:label>
     </owl:Class>
     
@@ -330,9 +369,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purls.helmholtz-metadaten.de/cdos/cdco/DefectComplex -->
 
     <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/DefectComplex">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A combination of two or more defects in close proximity that interact with each other, such as a vacancy-impurity pair or a grain boundary-impurity pair, often affecting the material’s properties.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defect Complex</rdfs:label>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defect Cluster</skos:altLabel>
+        <obo:IAO_0000115>A combination of two or more defects in close proximity that interact with each other, such as a vacancy-impurity pair or a grain boundary-impurity pair, often affecting the material’s properties.</obo:IAO_0000115>
+        <rdfs:label>Defect Complex</rdfs:label>
+        <skos:altLabel>Defect Cluster</skos:altLabel>
     </owl:Class>
     
 
@@ -340,9 +379,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purls.helmholtz-metadaten.de/cdos/cdco/Material -->
 
     <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cdos/cdco/Material">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Materials are substances in the condensed states (liquid, solid, colloidal) designed or manipulated for technological ends.</obo:IAO_0000115>
+        <obo:IAO_0000115>Materials are substances in the condensed states (liquid, solid, colloidal) designed or manipulated for technological ends.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://web.archive.org/web/20100801234616/http://www.nature.com/nmat/authors/index.html</obo:IAO_0000119>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Material</rdfs:label>
+        <rdfs:label>Material</rdfs:label>
     </owl:Class>
     
 
@@ -351,7 +390,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cdos/ldo/LineDefect">
         <rdfs:subClassOf rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallographicDefect"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear or one-dimensional defect around which some of the atoms are misaligned.</obo:IAO_0000115>
+        <obo:IAO_0000115>Linear or one-dimensional defect around which some of the atoms are misaligned.</obo:IAO_0000115>
         <rdfs:label>Line Defect</rdfs:label>
     </owl:Class>
     
@@ -361,7 +400,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cdos/pldo/PlanarDefect">
         <rdfs:subClassOf rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallographicDefect"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A planar defect is a defect of the crystal structure across a plane. It is considered to be a two-dimensional defect, such as an internal interface or the surface.</obo:IAO_0000115>
+        <obo:IAO_0000115>A planar defect is a defect of the crystal structure across a plane. It is considered to be a two-dimensional defect, such as an internal interface or the surface.</obo:IAO_0000115>
         <rdfs:label>Planar Defect</rdfs:label>
         <skos:altLabel>Interface</skos:altLabel>
     </owl:Class>
@@ -372,12 +411,12 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purls.helmholtz-metadaten.de/cdos/podo/PointDefect">
         <rdfs:subClassOf rdf:resource="http://purls.helmholtz-metadaten.de/cdos/cdco/CrystallographicDefect"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A point defect is a crystalline defect which is localized at or around a single lattice point. It is considered to be a zero-dimensional defect because it does not extend in any dimension in the lattice.</obo:IAO_0000115>
+        <obo:IAO_0000115>A point defect is a crystalline defect which is localized at or around a single lattice point. It is considered to be a zero-dimensional defect because it does not extend in any dimension in the lattice.</obo:IAO_0000115>
         <rdfs:label>Point Defect</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
